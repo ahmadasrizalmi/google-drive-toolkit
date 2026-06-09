@@ -15,8 +15,6 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 });
 
 // Side panel behavior
-if (chrome.sidePanel && chrome.sidePanel.setPanelBehavior) {
-  chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true })
     .then(() => console.log('[GDT] Side panel behavior set'))
     .catch(e => console.warn('[GDT] Side panel error:', e));
 }
