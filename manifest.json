@@ -2,12 +2,13 @@
   "manifest_version": 3,
   "name": "Google Drive Toolkit",
   "version": "1.0",
-  "description": "Google Drive Toolkit Chrome Extension — extract download links, copy to your drive, bulk download from shared folders.",
+  "description": "Google Drive Toolkit Chrome Extension \u2014 extract download links, copy to your drive, bulk download from shared folders.",
   "permissions": [
     "activeTab",
     "storage",
     "identity",
-    "downloads"
+    "downloads",
+    "side_panel"
   ],
   "host_permissions": [
     "https://www.googleapis.com/*",
@@ -19,11 +20,17 @@
   "side_panel": {
     "default_path": "sidepanel.html"
   },
-  "content_scripts": [{
-    "matches": ["https://drive.google.com/*"],
-    "js": ["content.js"],
-    "run_at": "document_idle"
-  }],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://drive.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
   "oauth2": {
     "client_id": "1071006060591-tmhssin2h21lcre235vtolojh4g403ep.apps.googleusercontent.com",
     "scopes": [
