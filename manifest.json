@@ -7,8 +7,7 @@
     "activeTab",
     "storage",
     "identity",
-    "downloads",
-    "side_panel"
+    "downloads"
   ],
   "host_permissions": [
     "https://www.googleapis.com/*",
